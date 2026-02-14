@@ -1,0 +1,21 @@
+name: EHolyGarant
+version: '1.0'
+main: org.rofu.eholygarant.EHolyGarant
+api-version: '1.20'
+depend: [Vault]
+author: Rofu
+commands:
+  garant:
+permissions:
+  garant.use:
+    default: true
+  garant.moderator:
+    default: op
+  garant.admin:
+    default: op
+  garant.*:
+    default: op
+    children:
+      garant.use: true
+      garant.moderator: true
+      garant.admin: true
